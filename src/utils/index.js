@@ -91,7 +91,7 @@ function getData(emoji, skin, set) {
   }
 
   if (!Object.keys(emojiData).length) {
-    emojiData = emoji
+    emojiData = typeof emoji === 'string' ? { name: emoji } : emoji;
     emojiData.custom = true
 
     if (!emojiData.search) {
