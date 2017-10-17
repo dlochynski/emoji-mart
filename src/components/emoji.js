@@ -6,11 +6,11 @@ import { getData, getSanitizedData, unifiedToNative } from '../utils'
 
 const SHEET_COLUMNS = 49
 
-const _getPosition = props => {
-  var { sheet_x, sheet_y } = _getData(props),
-    multiply = 100 / (SHEET_COLUMNS - 1)
-
-  return `${multiply * sheet_x}% ${multiply * sheet_y}%`
+const _getPosition = (props) => {
+  const { sheet_x, sheet_y } = _getData(props);
+  let scale = props.size / props.sheetSize * -1;
+  let size = scale * props.sheetSize;
+  return `${size * sheet_x}px ${size * sheet_y}px`
 }
 
 const _getData = props => {

@@ -27,9 +27,10 @@ var _getPosition = function _getPosition(props) {
 
   var sheet_x = _getData2.sheet_x;
   var sheet_y = _getData2.sheet_y;
-  var multiply = 100 / (SHEET_COLUMNS - 1);
 
-  return multiply * sheet_x + '% ' + multiply * sheet_y + '%';
+  var scale = props.size / props.sheetSize * -1;
+  var size = scale * props.sheetSize;
+  return size * sheet_x + 'px ' + size * sheet_y + 'px';
 };
 
 var _getData = function _getData(props) {
