@@ -44,13 +44,13 @@ storiesOf('Picker', module)
 storiesOf('Emoji', module)
   .addDecorator(withKnobs)
   .add('default', () => (
-    <Emoji
-      native={boolean('Unicode', true)}
-      set={select('Emoji pack', SETS, SETS[0])}
-      emoji={text('Emoji', '+1')}
-      size={number('Emoji size', 64)}
-      skin={number('Skin tone', 1)}
-    />
+       <Emoji
+        native={boolean('Unicode', true)}
+        set={select('Emoji pack', SETS, SETS[0])}
+        emoji=":+assadasa:"
+        size={number('Emoji size', 64)}
+        skin={number('Skin tone', 1)}
+      />
   ));
 
 storiesOf('Headless Search', module)
